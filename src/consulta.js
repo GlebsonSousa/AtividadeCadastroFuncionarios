@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (btnVoltar) {
         btnVoltar.addEventListener('click', () => {
-            window.location.href = "../formulario.html";
+            window.location.href = "../index.html";
         });
     }
 });
