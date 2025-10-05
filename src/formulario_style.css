@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*  {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(/images/fundo2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.principal {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    width: 35rem;
+    height: auto;
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 40px;
+    background: rgba(128, 128, 128, 0.616); /* fundo semi-transparente */
+    backdrop-filter: blur(10px); /* aplica o desfoque */
+    -webkit-backdrop-filter: blur(15px); /* compatibilidade com Safari */
+    border: 3px solid rgba(230, 230, 230, 0.781);
+    position: relative;
+    gap: 1rem;
+    font-family: ;
+
+}
+
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    min-height: 8rem;
+    flex-direction: column;
+}
+
+.cabecalho span {
+    margin-top: 5px;
+    width: 15rem;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.596);
+    border-radius: 8px;
+}
+
+#titulo {
+    color: white;
+    font-family: 'roboto';
+    font-weight: 800;
+}
+
+.campos {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    height: 60%;
+}
+
+.campos input {
+    background-color: rgba(216, 216, 216, 0.37);
+    height: 2.5rem;
+    border-radius: 5px;
+    margin-top: 3px;
+    /*border: 1px solid rgba(230, 230, 230, 0.781);*/
+    padding-left: 5px;
+    color: white;
+    font-weight: 700;    
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+.campos input::placeholder {
+    color: #e6e6e6; /* Cor cinza suave */
+    font-weight: 800;
+}
+
+.campos span {
+    display: none;
+    padding-left: 5px;
+    margin-top: 1.5rem;
+    font-family: 'Roboto';
+    color: white;
+}
+
+#numero_registro {
+    width: 40%;
+}
+
+#nome_funcionario {
+    width: 80%;
+}
+
+#cargo {
+    width: 70%;
+}
+
+#salario {
+    width: 40%;
+}
+
+#data_adm {
+    width: 30%;
+}
+
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+}
+
+#btn_cadastrar {
+    width: 12rem;
+    height: 2.8rem;
+    margin-top: 2rem;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    color: #2D253A;
+    font-size: larger;
+    transition: ease-in-out 0.3s;
+}
+
+#btn_cadastrar:hover{
+    background-color:#2D253A;
+    color: #e6e6e6;
+    cursor: pointer;
+}
+
+#btn_cadastrar:active {
+    transform: scale(95%);
+    
+}
+
+#texto {
+    display: flex;
+    justify-content: end;
+    width: 80%;
+    
+}
+
+#texto a {
+    color: #eec19d;
+    font-family: 'Roboto';
+}
+

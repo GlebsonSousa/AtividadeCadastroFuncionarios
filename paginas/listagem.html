@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/listagem.css">
+    
+    <script src="/js.js" defer></script>
+    <script src="/src/consulta.js"></script>
+
+    <title>Listagem</title>
+</head>
+<body>
+    <div class="principal">
+        <div class="listagem">
+            <div class="cabecalho">
+                <h1 id="titulo">Listagem de usuarios</h1>
+                <span></span>
+            </div>
+            <div class="filtros">
+                <span >Filtrar por Nome</span>
+                <div id="pesquisa">
+                <input id="filtro_nome" type="text" placeholder="Digite o nome do funcionario">
+                    <button id="btn_filtrar">Filtrar</button>
+                    <button id="btn_voltar">Voltar</button>
+                </div>
+
+            <div class="tabela-container">
+    <table class="tabela">
+        <thead>
+            <tr>
+                <th>Nº Registro</th>
+                <th>Nome do Funcionário</th>
+                <th>Data de admissão</th>
+                <th>Cargo</th>
+                <th>Salário Bruto</th>
+                <th>INSS</th>
+                <th>Salário Líquido</th>
+                <th>Apagar</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+
+            <div class="rodape">
+            </div>
+
+            </div>
+        </div>
+</body>
+</html>

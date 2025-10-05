@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*  {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(/images/fundo2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.principal {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.listagem {
+    width: 75rem;
+    height: auto;
+    max-height: 80%;
+    overflow-y: scroll;
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 40px;
+    background: rgba(128, 128, 128, 0.616); /* fundo semi-transparente */
+    backdrop-filter: blur(10px); /* aplica o desfoque */
+    -webkit-backdrop-filter: blur(15px); /* compatibilidade com Safari */
+    border: 3px solid rgba(230, 230, 230, 0.781);
+    position: relative;
+    gap: 1rem;
+}
+
+
+
+.listagem::-webkit-scrollbar {
+    width: 10px;               /* largura da barra */
+    border-radius: 10px;
+}
+
+.listagem::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.233); /* trilho da barra */
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.listagem::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #888, #555);
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.listagem::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #aaa, #666);
+}
+
+/* Para navegadores que suportam scrollbar-color (Firefox) */
+.listagem {
+    scrollbar-width: thin;
+    scrollbar-color: #f5f3f3 rgba(255, 255, 255, 0.1);
+}
+
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    min-height: 8rem;
+    flex-direction: column;
+}
+
+.cabecalho span {
+    margin-top: 5px;
+    width: 15rem;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.596);
+    border-radius: 8px;
+}
+
+#titulo {
+    color: white;
+    font-family: 'roboto';
+    font-weight: 800;
+}
+
+.filtros {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    height: 60%;
+}
+
+
+.filtros input {
+    background-color: rgba(216, 216, 216, 0.37);
+    height: 2.5rem;
+    border-radius: 5px;
+    margin-top: 3px;
+    /*border: 1px solid rgba(230, 230, 230, 0.781);*/
+    padding-left: 5px;
+    color: white;
+    font-weight: 700;    
+    outline: none;
+    margin-bottom: 1rem;
+    
+}
+
+.filtros input::placeholder {
+    color: #e6e6e6; /* Cor cinza suave */
+    font-weight: 800;
+}
+
+.filtros span {
+    display: none;
+    padding-left: 5px;
+    margin-top: 1.5rem;
+    font-family: 'Roboto';
+    color: white;
+}
+
+#filtro_nome {
+    width: 80%;
+}
+
+#pesquisa {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+#btn_filtrar, #btn_voltar {
+    background-color: white;
+    color: black;
+    height: 2.5rem;
+    font-weight: 600;
+    border-radius: 6px;
+    width: 6rem;
+    border: none;
+    transition: 0.3s;
+    margin-bottom: 0.7rem;
+    cursor: pointer;
+}
+
+#btn_filtrar:hover, #btn_voltar:hover {
+    background-color: #2D253A;
+    color: white;
+}
+
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabela thead {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+}
+
+.tabela th, 
+.tabela td {
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tabela tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tabela tbody tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.apagar {
+    color: #ff6b6b;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.apagar:hover {
+    color: white;
+    background: #ff6b6b;
+    border-radius: 6px;
+}
+
+
+/* Cada “coluna” (ul) */
+.cabecalhos  {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 0.5rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* O valor (LI) */
+.cabecalhos li {
+    margin-top: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 0.4rem;
+    font-weight: 500;
+}
+
+/* Efeito hover */
+.cabecalhos li:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: 0.2s;
+}
+
+/* Responsivo: empilha as colunas no celular */
+@media (max-width: 900px) {
+    .tabela {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .tabela {
+        grid-template-columns: 1fr;
+    }
+}
